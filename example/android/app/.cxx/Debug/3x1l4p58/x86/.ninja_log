@@ -1,0 +1,11 @@
+# ninja log v5
+0	4	0	clean	f690fbae508b862b
+10	120	1768562329879563540	build.ninja	2d669b6bade12260
+0	7	0	/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/android/app/.cxx/Debug/3x1l4p58/x86/CMakeFiles/cmake.verify_globs	8b674ef86957a3ac
+0	7	0	/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/android/app/.cxx/Debug/3x1l4p58/x86/CMakeFiles/cmake.verify_globs	8b674ef86957a3ac
+0	987	1768597952262540818	CMakeFiles/appmodules.dir/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	b213fb93b2458497
+0	1049	1768597952322879909	CMakeFiles/appmodules.dir/OnLoad.cpp.o	425f0ac22f3ede28
+1049	1099	1768597952377851564	/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/android/app/build/intermediates/cxx/Debug/3x1l4p58/obj/x86/libappmodules.so	88af46de202b15fa
+0	8	0	/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/android/app/.cxx/Debug/3x1l4p58/x86/CMakeFiles/cmake.verify_globs	8b674ef86957a3ac
+0	7	0	/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/android/app/.cxx/Debug/3x1l4p58/x86/CMakeFiles/cmake.verify_globs	8b674ef86957a3ac
+0	7	0	/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/android/app/.cxx/Debug/3x1l4p58/x86/CMakeFiles/cmake.verify_globs	8b674ef86957a3ac

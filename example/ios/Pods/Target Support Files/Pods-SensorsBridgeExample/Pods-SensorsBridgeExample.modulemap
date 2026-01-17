@@ -1,0 +1,6 @@
+module Pods_SensorsBridgeExample {
+  umbrella header "Pods-SensorsBridgeExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

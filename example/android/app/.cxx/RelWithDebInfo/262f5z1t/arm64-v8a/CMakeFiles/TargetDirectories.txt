@@ -1,0 +1,3 @@
+/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/android/app/.cxx/RelWithDebInfo/262f5z1t/arm64-v8a/CMakeFiles/appmodules.dir
+/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/android/app/.cxx/RelWithDebInfo/262f5z1t/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/android/app/.cxx/RelWithDebInfo/262f5z1t/arm64-v8a/CMakeFiles/rebuild_cache.dir

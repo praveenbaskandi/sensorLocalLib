@@ -1,0 +1,1 @@
+/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt

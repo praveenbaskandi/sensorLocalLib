@@ -1,0 +1,1 @@
+/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/android/app/build/intermediates/cxx/Debug/3x1l4p58/obj/x86_64

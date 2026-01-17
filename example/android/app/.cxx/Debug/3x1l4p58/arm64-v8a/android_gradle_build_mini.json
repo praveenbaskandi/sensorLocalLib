@@ -1,0 +1,31 @@
+{
+  "buildFiles": [
+    "/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/praveenbaskandi/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/android/app/.cxx/Debug/3x1l4p58/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/praveenbaskandi/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/android/app/.cxx/Debug/3x1l4p58/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "appmodules::@6890427a1f51a3e7e1df": {
+      "artifactName": "appmodules",
+      "abi": "arm64-v8a",
+      "output": "/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/android/app/build/intermediates/cxx/Debug/3x1l4p58/obj/arm64-v8a/libappmodules.so",
+      "runtimeFiles": [
+        "/Users/praveenbaskandi/.gradle/caches/9.0.0/transforms/b85f62a599074afc3b2ec6cfb7884973/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so",
+        "/Users/praveenbaskandi/.gradle/caches/9.0.0/transforms/4c26de9c12ae8a9829439ab102c24dd1/transformed/react-android-0.83.0-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
+        "/Users/praveenbaskandi/.gradle/caches/9.0.0/transforms/4c26de9c12ae8a9829439ab102c24dd1/transformed/react-android-0.83.0-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so"
+      ]
+    }
+  }
+}
