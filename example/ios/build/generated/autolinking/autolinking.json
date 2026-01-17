@@ -1,25 +1,25 @@
 {
-  "root": "/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example",
-  "reactNativePath": "/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/node_modules/react-native",
+  "root": "/Users/praveenbaskandi/Desktop/sensorLocalLib/example",
+  "reactNativePath": "/Users/praveenbaskandi/Desktop/sensorLocalLib/example/node_modules/react-native",
   "reactNativeVersion": "0.83",
   "dependencies": {
     "@praveen/sensors-bridge": {
-      "root": "/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo",
+      "root": "/Users/praveenbaskandi/Desktop/sensorLocalLib",
       "name": "@praveen/sensors-bridge",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/SensorsBridge.podspec",
+          "podspecPath": "/Users/praveenbaskandi/Desktop/sensorLocalLib/SensorsBridge.podspec",
           "version": "0.1.0",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/android",
+          "sourceDir": "/Users/praveenbaskandi/Desktop/sensorLocalLib/android",
           "packageImportPath": "import com.praveen.sensorsbridge.SensorsBridgePackage;",
           "packageInstance": "new SensorsBridgePackage()",
           "buildTypes": [],
           "componentDescriptors": [],
-          "cmakeListsPath": "/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cmakeListsPath": "/Users/praveenbaskandi/Desktop/sensorLocalLib/android/build/generated/source/codegen/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -190,7 +190,7 @@
         {
           "name": "--path <path>",
           "description": "Path to the React Native project root.",
-          "default": "/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/ios"
+          "default": "/Users/praveenbaskandi/Desktop/sensorLocalLib/example/ios"
         },
         {
           "name": "--platform <string>",
@@ -490,7 +490,7 @@
   "assets": [],
   "project": {
     "ios": {
-      "sourceDir": "/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/ios",
+      "sourceDir": "/Users/praveenbaskandi/Desktop/sensorLocalLib/example/ios",
       "xcodeProject": {
         "name": "SensorsBridgeExample.xcworkspace",
         "path": ".",
@@ -500,7 +500,7 @@
       "assets": []
     },
     "android": {
-      "sourceDir": "/Users/praveenbaskandi/Desktop/@praveen/sensorsDemo/example/android",
+      "sourceDir": "/Users/praveenbaskandi/Desktop/sensorLocalLib/example/android",
       "appName": "app",
       "packageName": "praveen.sensorsbridge.example",
       "applicationId": "praveen.sensorsbridge.example",

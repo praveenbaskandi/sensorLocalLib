@@ -93,7 +93,14 @@ class SensorsBridgeModule(
 
         // --- LOCATION ---
         val interval = config?.getInt("locationIntervalMs") ?: 1000
-        locationRequest = LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, interval.toLong())
+        val accuracy = config?.getString("locationAccuracy")
+        val priority = when (accuracy) {
+            "low" -> Priority.PRIORITY_LOW_POWER
+            "balanced" -> Priority.PRIORITY_BALANCED_POWER_ACCURACY
+            else -> Priority.PRIORITY_HIGH_ACCURACY
+        }
+
+        locationRequest = LocationRequest.Builder(priority, interval.toLong())
             .setMinUpdateIntervalMillis(interval.toLong())
             .build()
 

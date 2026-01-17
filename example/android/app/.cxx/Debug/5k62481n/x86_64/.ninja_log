@@ -1,0 +1,7 @@
+# ninja log v5
+0	8	0	/Users/praveenbaskandi/Desktop/sensorLocalLib/example/android/app/.cxx/Debug/5k62481n/x86_64/CMakeFiles/cmake.verify_globs	4010c6ee46ee6bcf
+0	1586	1768648182634168080	CMakeFiles/appmodules.dir/Users/praveenbaskandi/Desktop/sensorLocalLib/example/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	93ecd51063e46a0a
+0	1725	1768648182769605627	CMakeFiles/appmodules.dir/OnLoad.cpp.o	33654beec8e198c7
+1725	1795	1768648182847546801	/Users/praveenbaskandi/Desktop/sensorLocalLib/example/android/app/build/intermediates/cxx/Debug/5k62481n/obj/x86_64/libappmodules.so	abdf6cad8a90835c
+1	10	0	/Users/praveenbaskandi/Desktop/sensorLocalLib/example/android/app/.cxx/Debug/5k62481n/x86_64/CMakeFiles/cmake.verify_globs	4010c6ee46ee6bcf
+0	8	0	/Users/praveenbaskandi/Desktop/sensorLocalLib/example/android/app/.cxx/Debug/5k62481n/x86_64/CMakeFiles/cmake.verify_globs	4010c6ee46ee6bcf
