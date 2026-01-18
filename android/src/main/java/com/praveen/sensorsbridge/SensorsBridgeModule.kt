@@ -132,6 +132,10 @@ class SensorsBridgeModule(
         }
 
         // --- GYROSCOPE ---
+        if (config != null && config.hasKey("gyroIntervalMs")) {
+            gyroIntervalMs = config.getInt("gyroIntervalMs").toLong()
+        }
+
         sensorManager = reactContext.getSystemService(Context.SENSOR_SERVICE) as SensorManager
         gyroSensor = sensorManager?.getDefaultSensor(Sensor.TYPE_GYROSCOPE)
         if (gyroSensor == null) {

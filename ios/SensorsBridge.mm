@@ -47,39 +47,44 @@ RCT_EXPORT_METHOD(isLocationServiceEnabled : (RCTPromiseResolveBlock)
 RCT_EXPORT_METHOD(getCurrentLocation : (RCTPromiseResolveBlock)
                       resolve rejecter : (RCTPromiseRejectBlock)reject) {
 
-  if (![CLLocationManager locationServicesEnabled]) {
-    reject(@"location_disabled", @"Location services disabled", nil);
-    return;
-  }
+  dispatch_async(dispatch_get_main_queue(), ^{
+    if (![CLLocationManager locationServicesEnabled]) {
+      reject(@"location_disabled", @"Location services disabled", nil);
+      return;
+    }
 
-  CLLocationManager *manager = [[CLLocationManager alloc] init];
-  manager.delegate = self;
-  manager.desiredAccuracy = kCLLocationAccuracyBest;
+    CLLocationManager *manager = [[CLLocationManager alloc] init];
+    manager.delegate = self;
+    manager.desiredAccuracy = kCLLocationAccuracyBest;
 
-  [manager requestWhenInUseAuthorization];
-  [manager requestLocation];
+    [manager requestWhenInUseAuthorization];
+    [manager requestLocation];
 
-  objc_setAssociatedObject(manager, &kResolveKey, resolve,
-                           OBJC_ASSOCIATION_COPY);
-  objc_setAssociatedObject(manager, &kRejectKey, reject, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(manager, &kResolveKey, resolve,
+                             OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(manager, &kRejectKey, reject,
+                             OBJC_ASSOCIATION_COPY);
+  });
 }
 
 RCT_EXPORT_METHOD(startSensors : (NSDictionary *)config resolver : (
     RCTPromiseResolveBlock)resolve rejecter : (RCTPromiseRejectBlock)reject) {
 
-  [self startLocationUpdates:config];
-  [self startGyroUpdates:config];
-
-  resolve(@(YES));
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [self startLocationUpdates:config];
+    [self startGyroUpdates:config];
+    resolve(@(YES));
+  });
 }
 
 RCT_EXPORT_METHOD(stopSensors : (RCTPromiseResolveBlock)
                       resolve rejecter : (RCTPromiseRejectBlock)reject) {
 
-  [_locationManager stopUpdatingLocation];
-  [_motionManager stopGyroUpdates];
-
-  resolve(@(YES));
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [_locationManager stopUpdatingLocation];
+    [_motionManager stopGyroUpdates];
+    resolve(@(YES));
+  });
 }
 
 - (void)startLocationUpdates:(NSDictionary *)config {
@@ -185,15 +190,21 @@ RCT_EXPORT_METHOD(stopSensors : (RCTPromiseResolveBlock)
        didFailWithError:(NSError *)error {
 
   RCTPromiseRejectBlock reject = objc_getAssociatedObject(manager, &kRejectKey);
+
+  NSString *errorCode = @"location_error";
+  if (error.domain == kCLErrorDomain && error.code == kCLErrorDenied) {
+    errorCode = @"permission_denied";
+  }
+
   if (reject) {
-    reject(@"location_error", error.localizedDescription, error);
+    reject(errorCode, error.localizedDescription, error);
     objc_setAssociatedObject(manager, &kRejectKey, nil, OBJC_ASSOCIATION_COPY);
   }
 
   if (_hasListeners) {
     [self sendEventWithName:@"onLocationError"
                        body:@{
-                         @"code" : @"location_error",
+                         @"code" : errorCode,
                          @"message" : error.localizedDescription
                        }];
   }
