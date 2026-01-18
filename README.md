@@ -156,8 +156,12 @@ MIT
 
 Example
 
-
+Initial screen
 https://github.com/user-attachments/assets/8231829f-9bf2-401c-9b61-3e0e9beeb85a
+
+Location changes
+
+https://github.com/user-attachments/assets/ca74f6f0-e137-4f97-9081-8997c6257521
 
 
 
