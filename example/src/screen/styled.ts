@@ -32,4 +32,10 @@ export const styles = StyleSheet.create({
     fontFamily: 'Courier',
     fontSize: 13,
   },
+  rowBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    marginTop: 10,
+  },
 });

@@ -89,6 +89,12 @@ RCT_EXPORT_METHOD(stopSensors : (RCTPromiseResolveBlock)
 
 - (void)startLocationUpdates:(NSDictionary *)config {
 
+  // Stop previous updates to prevent leaking or multiple managers
+  if (_locationManager) {
+    [_locationManager stopUpdatingLocation];
+    _locationManager = nil;
+  }
+
   _locationManager = [[CLLocationManager alloc] init];
   _locationManager.delegate = self;
 
@@ -108,6 +114,12 @@ RCT_EXPORT_METHOD(stopSensors : (RCTPromiseResolveBlock)
 #pragma mark - Gyroscope
 
 - (void)startGyroUpdates:(NSDictionary *)config {
+
+  // Stop previous updates
+  if (_motionManager) {
+    [_motionManager stopGyroUpdates];
+    _motionManager = nil;
+  }
 
   _motionManager = [[CMMotionManager alloc] init];
 

@@ -22,6 +22,9 @@ class GyroscopeImpl(private val reactContext: ReactApplicationContext) : SensorE
     fun startUpdates(config: ReadableMap?, emitEvent: (String, WritableMap) -> Unit) {
         this.eventEmitter = emitEvent
         
+        // Stop existing updates if any to prevent duplicates
+        stopUpdates()
+
         if (config != null && config.hasKey("gyroIntervalMs")) {
             gyroIntervalMs = config.getInt("gyroIntervalMs").toLong()
         }

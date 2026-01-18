@@ -2,20 +2,13 @@ import { SafeAreaView, ScrollView, Text, View } from 'react-native';
 
 import { useSensorsViewModel } from '../screen/useSensorsViewModel';
 import RowBoxContent from '../component/RowBoxContent';
-import CustomButton from '../component/CustomButton';
+import RoundButton from '../component/RoundButton';
 import CardUI from '../component/CardUI';
 import { styles } from '../screen/styled';
 
 export function SensorsView() {
-  const {
-    location,
-    gyro,
-    locationEnabled,
-    status,
-    start,
-    stop,
-    fetchCurrentLocation,
-  } = useSensorsViewModel();
+  const { location, gyro, locationEnabled, status, start, stop } =
+    useSensorsViewModel();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -33,12 +26,18 @@ export function SensorsView() {
           </Text>
         </View>
         <View style={styles.section}>
-          <CustomButton text="Start Sensors" onPress={start} />
-          <CustomButton text="Stop Sensors" onPress={stop} color="#ff0000" />
-          <CustomButton
-            text="Get Current Location"
-            onPress={fetchCurrentLocation}
-          />
+          <View style={styles.rowBox}>
+            <RoundButton
+              title="Start Sensors"
+              onPress={start}
+              backgroundColor="#097969"
+            />
+            <RoundButton
+              title="Stop Sensors"
+              onPress={stop}
+              backgroundColor="#ff0000"
+            />
+          </View>
         </View>
         <CardUI
           title="Location Data:"

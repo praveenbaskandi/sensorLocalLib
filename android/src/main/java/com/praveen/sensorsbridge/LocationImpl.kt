@@ -69,6 +69,12 @@ class LocationImpl(private val reactContext: ReactApplicationContext) {
             return
         }
 
+        // Prevent multiple listeners: stop existing updates if any
+        if (locationCallback != null) {
+            fusedLocationClient.removeLocationUpdates(locationCallback!!)
+            locationCallback = null
+        }
+
         val interval = config?.getInt("locationIntervalMs") ?: 1000
         val accuracy = config?.getString("locationAccuracy")
         val priority = when (accuracy) {
